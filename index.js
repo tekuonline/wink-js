@@ -1,7 +1,7 @@
 var debug = require('debug')('wink:http');
 var async = require('async');
 var http = require('https');
-var config = require('config-file');
+//var config = require('config-file');
 
 var accessToken = undefined;
 var winkUri = undefined;
@@ -133,7 +133,7 @@ var wink = {
 	init: function(auth_data, callback) {
 		if ( auth_data.conf !== undefined ) {
 			// get data from config
-			auth_data = config.load(auth_data.conf);
+			//auth_data = config.load(auth_data.conf);
 		}
 
 		if ( process.env.WINK_HOST ) {
